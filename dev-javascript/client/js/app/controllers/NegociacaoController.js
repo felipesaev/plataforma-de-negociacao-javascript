@@ -25,6 +25,23 @@ class NegociacaoController {
         this._mensagem.texto = 'Negociação adicionada com sucesso'; 
         this._limpaFormulario();   
     }
+
+    importaNegociacoes() {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'negociacoes/semana');
+        xhr.onreadystatechange = () =>{
+            if(xhr.readyState == 4) {
+                if(xhr.status == 200) {
+                    console.log("importação feita com sucesso");
+                    
+                } else {
+                    console.log("Não foi possivel importar as negociações do servidor");
+                    
+                }
+            }
+        }
+    xhr.send();
+    }
     
     apaga() {
         
