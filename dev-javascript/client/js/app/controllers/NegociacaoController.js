@@ -30,7 +30,7 @@ class NegociacaoController {
 
         let service = new NegociacaoService();
     
-        service.obterNegociacoesDaSemana((erro, negociacoes) => {
+        service.obterNegociacoesDa((erro, negociacoes) => {
     
             if(erro) {
                 this._mensagem.texto = erro;
