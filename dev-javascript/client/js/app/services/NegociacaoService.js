@@ -3,9 +3,7 @@ class NegociacaoService {
     constructor() {
         this.http = new HttpService();   
     }
-
-    obterNegociacoesDaSemana() {
-
+    obterNegociacoesDaSemana() {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
         return new Promise((resolve, reject) => {
 
             this.http
